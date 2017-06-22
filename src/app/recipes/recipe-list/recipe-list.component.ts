@@ -14,7 +14,7 @@ export class RecipeListComponent implements OnInit {
     new Recipe('A Test Recipe', 'This is a test', 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Banjo_Shark_recipe.jpg/1280px-Banjo_Shark_recipe.jpg')
   ];
 
-  constructor() { }
+  constructor() {  }
 
   ngOnInit() {
   }
