@@ -11,24 +11,25 @@ import { RecipeService } from './recipe.service'
 
 export class RecipesComponent implements OnInit {
   selectedRecipe: Recipe;
-  recipeIsSelected: boolean = false;
   constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
     this.recipeService.recipeSelected
       .subscribe(
-        
+        (recipe: Recipe) => {
+          this.selectedRecipe = recipe;
+        }
       )
   }
 
-  onSelectedRecipe(recipe: Recipe) {
-    //console.log('Hi ' + recipe.name);
-  }
-
-  onRecipeWasSelected(varj) {
-      //console.log(varj);
-      this.recipeIsSelected = true;
-      this.selectedRecipe = varj;
-  }
+  // onSelectedRecipe(recipe: Recipe) {
+  //   //console.log('Hi ' + recipe.name);
+  // }
+  
+  // onRecipeWasSelected(varj) {
+  //     //console.log(varj);
+  //     this.recipeIsSelected = true;
+  //     this.selectedRecipe = varj;
+  // }
 
 }
