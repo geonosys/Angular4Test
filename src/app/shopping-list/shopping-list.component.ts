@@ -14,6 +14,13 @@ export class ShoppingListComponent implements OnInit {
 
   ngOnInit() {  
     this.ingredients = this.slService.getIngredients();
+    //  Subscribe to the property so that when ingredients change we get the new data
+    this.slService.ingredientsChanged
+      .subscribe(
+        (ingredients: Ingredient[]) => {
+          this.ingredients = ingredients;
+        }
+      )
   }
 
 }
