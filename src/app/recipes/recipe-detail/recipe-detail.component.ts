@@ -15,4 +15,8 @@ export class RecipeDetailComponent implements OnInit {
     console.log(this.recipe.name );
   }
 
+  onClicked() {
+    console.log("Clicked");
+  }
+
 }
