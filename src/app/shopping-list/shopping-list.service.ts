@@ -24,4 +24,10 @@ export class ShoppingListService {
     this.ingredients.push(ingredient);
     this.ingredientsChanged.emit(this.ingredients.slice());
   }
+
+  addIngredients(ingredients: Ingredient[]) {
+    this.ingredients.push(...ingredients);    // ... is a spread operator, which allows each item to be added into the array
+    this.ingredientsChanged.emit(this.ingredients.slice());
+  }
+
 }
